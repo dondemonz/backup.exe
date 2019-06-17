@@ -45,3 +45,27 @@ hash6_MPEG4 = "8e50c6b9a0c7673095306e8a1238467b"
 hash6_MJPEG = "6d627f33c4580cee0c957c70755f6180"
 hash6_YUAN = "8e32b9a4e74b88273ba3cb1f8ebeb695"
 hash6_MxPEG = "bfb28f63aead7c45f4ad005b07b1ba46"
+
+#test_7
+hash7_H264 = "06eaea1a27dc217a405f2ab9805d136b"
+hash7_H263 = "8c438179e2c21df0a08d12160d108162"
+hash7_MPEG4 = "896575118aafbf742143bf738af6c4d6"
+hash7_MJPEG = "48344e8e0b3e403a4c052a86c001c87b"
+hash7_YUAN = "1ed9ff60f548f8a05253d526d9b2a3c4"
+hash7_MxPEG = "8c438179e2c21df0a08d12160d108162"
+
+#test_8
+hash8_H264 = "c3571422baa267939fa4851e17d355df"
+hash8_H263 = "bb0bafda0ca9bfd43c9aada6cab5da4e"
+hash8_MPEG4 = "202e6f725e4834054048e21d4a06c09d"
+hash8_MJPEG = "42aa00bbdb2a96ed362fc541fb49bc43"
+hash8_YUAN = "dc80e9464d665732737b5969db44d600"
+hash8_MxPEG = "bb0bafda0ca9bfd43c9aada6cab5da4e"
+
+#test_9
+hash9_H264 = "66666995a51707d38dbb5d95c2d372b2"
+hash9_H263 = "299ef1b0c7a1c164bc0f5f153e67e9c3"
+hash9_MPEG4 = "36f2389aaaec7f7cc844ab8ace490e7e"
+hash9_MJPEG = "a47cf722a4381e33ccc6bcbb9c900653"
+hash9_YUAN = "c7a3b07583df42d89b67ba2d3819cb22"
+hash9_MxPEG = "299ef1b0c7a1c164bc0f5f153e67e9c3"
