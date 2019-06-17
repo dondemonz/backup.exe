@@ -122,30 +122,3 @@ def test_61_MxPEG():
     assert hasher.hexdigest() == hash4_MxPEG
     os.remove(''+output_folder + out_file_name+'')
 
-
-
-
-
-"""
-#тест убрал, т.к. при открытии через visual builder он отключен. И при экспорте backup.exe не может не разделять файлы с разными потоками (занимается этим конвертер) 
-def test_35_MIX():
-    m = dt.datetime.now()
-    end_time = m.strftime("%Y%m%dT%H%M%S%Z")
-    cam_id = "35"
-    out_file_name = "35_MIX.avi"
-    app = Application(backend="uia").start(r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '"').connect(title='Утилита экспорта медиа данных')
-    dlg = app.window(title='Утилита экспорта медиа данных')
-    dlg1 = dlg.child_window(auto_id="2")
-    dlg1.wait('visible', timeout=170)
-    dlg.child_window(auto_id="2").click()
-
-    hasher = hashlib.md5()
-    with open(''+output_folder + out_file_name+'', 'rb') as afile:
-        buf = afile.read()
-        hasher.update(buf)
-    print(hasher.hexdigest())
-    #assert hasher.hexdigest() == hash_MIX
-"""
-    # subprocess.check_call(["C:\\Program Files (x86)\\ISS\\SecurOS\\backup.exe", "--out=C:\\videoaudioConverter_test\\Output\\out.avi", "--cam=33", "--from=18-03-10 18:00:00", "--to="+tm+"", "--archive-path=C:\\videoaudioConverter_test\\Source_video"]) вызов через другую библиотеку
-    #dlg.child_window(auto_id="2").wait('visible',  timeout=50, retry_interval=0.5)  еще один вариант ожидания, на всякий случай
-
