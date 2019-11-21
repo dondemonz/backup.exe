@@ -9,11 +9,18 @@ import os
 
 
 def test_30_H264():
-    m = dt.datetime.now()
-    end_time = m.strftime("%Y%m%dT%H%M%S%Z")
     cam_id = "30"
     out_file_name = "30_H264.asf"
-    app = Application(backend="uia").start(r'"'+path_to_backupexe+'" --out "'+output_folder+out_file_name+'" --cam "' + cam_id + '" --from "'+begin_time+'" --to "' + end_time + '" --archive-path "'+path_to_archive+'" --video-codec MPEG4 --audio-codec PCM --span cd --video-quality 0 --audio-quality 100 --fps-divider 1').connect(title='Утилита экспорта медиа данных')
+    video_codec = "MPEG4"
+    audio_codec = "PCM"
+    span = "cd"
+    video_quality = "0"
+    audio_quality = "100"
+    fps_divider = "1"
+
+    m = dt.datetime.now()
+    end_time = m.strftime("%Y%m%dT%H%M%S%Z")
+    app = Application(backend="uia").start(r'"'+path_to_backupexe+'" --out "'+output_folder+out_file_name+'" --cam "' + cam_id + '" --from "'+begin_time+'" --to "' + end_time + '" --archive-path "'+path_to_archive+'" --video-codec "'+video_codec+'" --audio-codec "'+audio_codec+'" --span "'+span+'" --video-quality "'+video_quality+'" --audio-quality "'+audio_quality+'" --fps-divider "'+fps_divider+'"').connect(title='Утилита экспорта медиа данных')
     dlg = app.window(title='Утилита экспорта медиа данных')
     dlg1 = dlg.child_window(auto_id="2")
     dlg1.wait('visible', timeout=150)
@@ -29,10 +36,10 @@ def test_30_H264():
 
 
 def test_31_H263():
-    m = dt.datetime.now()
-    end_time = m.strftime("%Y%m%dT%H%M%S%Z")
     cam_id = "31"
     out_file_name = "31_H263.asf"
+    m = dt.datetime.now()
+    end_time = m.strftime("%Y%m%dT%H%M%S%Z")
     app = Application(backend="uia").start(r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec MPEG4 --audio-codec PCM --span cd --video-quality 0 --audio-quality 100 --fps-divider 1').connect(title='Утилита экспорта медиа данных')
     dlg = app.window(title='Утилита экспорта медиа данных')
     dlg1 = dlg.child_window(auto_id="2")
@@ -48,10 +55,10 @@ def test_31_H263():
     os.remove(''+output_folder + out_file_name+'')
 
 def test_32_MPEG4():
-    m = dt.datetime.now()
-    end_time = m.strftime("%Y%m%dT%H%M%S%Z")
     cam_id = "32"
     out_file_name = "32_MPEG4.asf"
+    m = dt.datetime.now()
+    end_time = m.strftime("%Y%m%dT%H%M%S%Z")
     app = Application(backend="uia").start(r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec MPEG4 --audio-codec PCM --span cd --video-quality 0 --audio-quality 100 --fps-divider 1').connect(title='Утилита экспорта медиа данных')
     dlg = app.window(title='Утилита экспорта медиа данных')
     dlg1 = dlg.child_window(auto_id="2")
@@ -67,10 +74,10 @@ def test_32_MPEG4():
     os.remove(''+output_folder + out_file_name+'')
 
 def test_33_MJPEG():
-    m = dt.datetime.now()
-    end_time = m.strftime("%Y%m%dT%H%M%S%Z")
     cam_id = "33"
     out_file_name = "33_MJPEG.asf"
+    m = dt.datetime.now()
+    end_time = m.strftime("%Y%m%dT%H%M%S%Z")
     app = Application(backend="uia").start(r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec MPEG4 --audio-codec PCM --span cd --video-quality 0 --audio-quality 100 --fps-divider 1').connect(title='Утилита экспорта медиа данных')
     dlg = app.window(title='Утилита экспорта медиа данных')
     dlg1 = dlg.child_window(auto_id="2")
@@ -86,10 +93,10 @@ def test_33_MJPEG():
     os.remove(''+output_folder + out_file_name+'')
 
 def test_34_YUAN():
-    m = dt.datetime.now()
-    end_time = m.strftime("%Y%m%dT%H%M%S%Z")
     cam_id = "34"
     out_file_name = "34_YUAN.asf"
+    m = dt.datetime.now()
+    end_time = m.strftime("%Y%m%dT%H%M%S%Z")
     app = Application(backend="uia").start(r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec MPEG4 --audio-codec PCM --span cd --video-quality 0 --audio-quality 100 --fps-divider 1').connect(title='Утилита экспорта медиа данных')
     dlg = app.window(title='Утилита экспорта медиа данных')
     dlg1 = dlg.child_window(auto_id="2")
@@ -105,10 +112,10 @@ def test_34_YUAN():
     os.remove(''+output_folder + out_file_name+'')
 
 def test_61_MxPEG():
-    m = dt.datetime.now()
-    end_time = m.strftime("%Y%m%dT%H%M%S%Z")
     cam_id = "31"
     out_file_name = "61_MxPEG.asf"
+    m = dt.datetime.now()
+    end_time = m.strftime("%Y%m%dT%H%M%S%Z")
     app = Application(backend="uia").start(r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec MPEG4 --audio-codec PCM --span cd --video-quality 0 --audio-quality 100 --fps-divider 1').connect(title='Утилита экспорта медиа данных')
     dlg = app.window(title='Утилита экспорта медиа данных')
     dlg1 = dlg.child_window(auto_id="2")
