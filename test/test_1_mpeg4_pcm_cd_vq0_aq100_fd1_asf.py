@@ -8,7 +8,7 @@ import os
 # import subprocess
 
 
-def test_30_H264():
+def test_30_H264(fix):
     cam_id = "30"
     out_file_name = "30_H264.asf"
     video_codec = "MPEG4"
@@ -18,21 +18,43 @@ def test_30_H264():
     audio_quality = "100"
     fps_divider = "1"
 
-    m = dt.datetime.now()
-    end_time = m.strftime("%Y%m%dT%H%M%S%Z")
-    app = Application(backend="uia").start(r'"'+path_to_backupexe+'" --out "'+output_folder+out_file_name+'" --cam "' + cam_id + '" --from "'+begin_time+'" --to "' + end_time + '" --archive-path "'+path_to_archive+'" --video-codec "'+video_codec+'" --audio-codec "'+audio_codec+'" --span "'+span+'" --video-quality "'+video_quality+'" --audio-quality "'+audio_quality+'" --fps-divider "'+fps_divider+'"').connect(title='Утилита экспорта медиа данных')
+    #end_time = take_timestamp()
+
+    app = start_app_backup(audio_codec, audio_quality, cam_id, fix.end_time, fps_divider, out_file_name, span, video_codec, video_quality)
+    start_process_backup(app)
+
+    hasher = take_hash_sum(out_file_name)
+    assert hasher.hexdigest() == hash1_H264
+    os.remove(''+output_folder + out_file_name+'')
+
+
+def take_hash_sum(out_file_name):
+    hasher = hashlib.md5()
+    with open('' + output_folder + out_file_name + '', 'rb') as afile:
+        buf = afile.read()
+        hasher.update(buf)
+    print(hasher.hexdigest())
+    return hasher
+
+
+def start_process_backup(app):
     dlg = app.window(title='Утилита экспорта медиа данных')
     dlg1 = dlg.child_window(auto_id="2")
     dlg1.wait('visible', timeout=150)
     dlg.child_window(auto_id="2").click()
 
-    hasher = hashlib.md5()
-    with open(''+output_folder + out_file_name+'', 'rb') as afile:
-        buf = afile.read()
-        hasher.update(buf)
-    print(hasher.hexdigest())
-    assert hasher.hexdigest() == hash1_H264
-    os.remove(''+output_folder + out_file_name+'')
+
+def start_app_backup(audio_codec, audio_quality, cam_id, end_time, fps_divider, out_file_name, span, video_codec, video_quality):
+    app = Application(backend="uia").start(
+        r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec "' + video_codec + '" --audio-codec "' + audio_codec + '" --span "' + span + '" --video-quality "' + video_quality + '" --audio-quality "' + audio_quality + '" --fps-divider "' + fps_divider + '"').connect(
+        title='Утилита экспорта медиа данных')
+    return app
+
+
+def take_timestamp():
+    m = dt.datetime.now()
+    end_time = m.strftime("%Y%m%dT%H%M%S%Z")
+    return end_time
 
 
 def test_31_H263():
