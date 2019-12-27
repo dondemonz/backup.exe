@@ -1,7 +1,7 @@
 import datetime as dt
 
 class Helper:
-    def __init__(self, end_time=None):
+    def __init__(self, end_time=""):
         self.end_time = end_time
 
     def take_timestamp(self):
