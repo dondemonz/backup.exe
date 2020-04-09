@@ -14,7 +14,7 @@ def test_30_H264():
     cam_id = "30"
     out_file_name = "30_H264.asf"
     app = Application(backend="uia").start(r'"'+path_to_backupexe+'" --out "'+output_folder+out_file_name+'" --cam "' + cam_id + '" --from "'+begin_time+'" --to "' + end_time + '" --archive-path "'+path_to_archive+'" --video-codec MJPEG --audio-codec PCM --span cd --video-quality 45 --audio-quality 100 --fps-divider 65 --video-only').connect(title=title)
-    dlg = app.window(title='Утилита экспорта медиа данных')
+    dlg = app.window(title=title)
     dlg1 = dlg.child_window(auto_id="2")
     dlg1.wait('visible', timeout=150)
     dlg.child_window(auto_id="2").click()
@@ -33,7 +33,7 @@ def test_31_H263():
     cam_id = "31"
     out_file_name = "31_H263.asf"
     app = Application(backend="uia").start(r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec MJPEG --audio-codec PCM --span cd --video-quality 45 --audio-quality 100 --fps-divider 65 --video-only ').connect(title=title)
-    dlg = app.window(title='Утилита экспорта медиа данных')
+    dlg = app.window(title=title)
     dlg1 = dlg.child_window(auto_id="2")
     dlg1.wait('visible', timeout=150)
     dlg.child_window(auto_id="2").click()
@@ -52,7 +52,7 @@ def test_32_MPEG4():
     cam_id = "32"
     out_file_name = "32_MPEG4.asf"
     app = Application(backend="uia").start(r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec MJPEG --audio-codec PCM --span cd --video-quality 45 --audio-quality 100 --fps-divider 65 --video-only ').connect(title=title)
-    dlg = app.window(title='Утилита экспорта медиа данных')
+    dlg = app.window(title=title)
     dlg1 = dlg.child_window(auto_id="2")
     dlg1.wait('visible', timeout=150)
     dlg.child_window(auto_id="2").click()
@@ -71,7 +71,7 @@ def test_33_MJPEG():
     cam_id = "33"
     out_file_name = "33_MJPEG.asf"
     app = Application(backend="uia").start(r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec MJPEG --audio-codec PCM --span cd --video-quality 45 --audio-quality 100 --fps-divider 65 --video-only').connect(title=title)
-    dlg = app.window(title='Утилита экспорта медиа данных')
+    dlg = app.window(title=title)
     dlg1 = dlg.child_window(auto_id="2")
     dlg1.wait('visible', timeout=150)
     dlg.child_window(auto_id="2").click()
@@ -90,7 +90,7 @@ def test_34_YUAN():
     cam_id = "34"
     out_file_name = "34_YUAN.asf"
     app = Application(backend="uia").start(r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec MJPEG --audio-codec PCM --span cd --video-quality 45 --audio-quality 100 --fps-divider 65 --video-only').connect(title=title)
-    dlg = app.window(title='Утилита экспорта медиа данных')
+    dlg = app.window(title=title)
     dlg1 = dlg.child_window(auto_id="2")
     dlg1.wait('visible', timeout=150)
     dlg.child_window(auto_id="2").click()
@@ -109,7 +109,7 @@ def test_61_MxPEG():
     cam_id = "31"
     out_file_name = "61_MxPEG.asf"
     app = Application(backend="uia").start(r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec MJPEG --audio-codec PCM --span cd --video-quality 45 --audio-quality 100 --fps-divider 65 --video-only').connect(title=title)
-    dlg = app.window(title='Утилита экспорта медиа данных')
+    dlg = app.window(title=title)
     dlg1 = dlg.child_window(auto_id="2")
     dlg1.wait('visible', timeout=150)
     dlg.child_window(auto_id="2").click()
