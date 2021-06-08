@@ -46,7 +46,7 @@ def start_process_backup(app):
 
 def start_app_backup(audio_codec, audio_quality, cam_id, end_time, fps_divider, out_file_name, span, video_codec, video_quality):
     app = Application(backend="uia").start(
-        r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec "' + video_codec + '" --audio-codec "' + audio_codec + '" --span "' + span + '" --video-quality "' + video_quality + '" --audio-quality "' + audio_quality + '" --fps-divider "' + fps_divider + '"').connect(
+        r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec "' + video_codec + '" --audio-codec "' + audio_codec + '" --span "' + span + '" --video-quality "' + video_quality + '" --fps-divider "' + fps_divider + '"').connect(
         title=title)
     return app
 
@@ -62,7 +62,7 @@ def test_31_H263():
     out_file_name = "31_H263.asf"
     m = dt.datetime.now()
     end_time = m.strftime("%Y%m%dT%H%M%S%Z")
-    app = Application(backend="uia").start(r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec MPEG4 --audio-codec PCM --span cd --video-quality 0 --audio-quality 100 --fps-divider 1').connect(title=title)
+    app = Application(backend="uia").start(r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec MPEG4 --audio-codec PCM --span cd --video-quality 0 --fps-divider 1').connect(title=title)
     dlg = app.window(title=title)
     dlg1 = dlg.child_window(auto_id="2")
     dlg1.wait('visible', timeout=150)
@@ -81,7 +81,7 @@ def test_32_MPEG4():
     out_file_name = "32_MPEG4.asf"
     m = dt.datetime.now()
     end_time = m.strftime("%Y%m%dT%H%M%S%Z")
-    app = Application(backend="uia").start(r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec MPEG4 --audio-codec PCM --span cd --video-quality 0 --audio-quality 100 --fps-divider 1').connect(title=title)
+    app = Application(backend="uia").start(r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec MPEG4 --audio-codec PCM --span cd --video-quality 0 --fps-divider 1').connect(title=title)
     dlg = app.window(title=title)
     dlg1 = dlg.child_window(auto_id="2")
     dlg1.wait('visible', timeout=150)
@@ -100,7 +100,7 @@ def test_33_MJPEG():
     out_file_name = "33_MJPEG.asf"
     m = dt.datetime.now()
     end_time = m.strftime("%Y%m%dT%H%M%S%Z")
-    app = Application(backend="uia").start(r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec MPEG4 --audio-codec PCM --span cd --video-quality 0 --audio-quality 100 --fps-divider 1').connect(title=title)
+    app = Application(backend="uia").start(r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec MPEG4 --audio-codec PCM --span cd --video-quality 0 --fps-divider 1').connect(title=title)
     dlg = app.window(title=title)
     dlg1 = dlg.child_window(auto_id="2")
     dlg1.wait('visible', timeout=150)
@@ -119,7 +119,7 @@ def test_34_YUAN():
     out_file_name = "34_YUAN.asf"
     m = dt.datetime.now()
     end_time = m.strftime("%Y%m%dT%H%M%S%Z")
-    app = Application(backend="uia").start(r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec MPEG4 --audio-codec PCM --span cd --video-quality 0 --audio-quality 100 --fps-divider 1').connect(title=title)
+    app = Application(backend="uia").start(r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec MPEG4 --audio-codec PCM --span cd --video-quality 0 --fps-divider 1').connect(title=title)
     dlg = app.window(title=title)
     dlg1 = dlg.child_window(auto_id="2")
     dlg1.wait('visible', timeout=150)
@@ -138,7 +138,7 @@ def test_61_MxPEG():
     out_file_name = "61_MxPEG.asf"
     m = dt.datetime.now()
     end_time = m.strftime("%Y%m%dT%H%M%S%Z")
-    app = Application(backend="uia").start(r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec MPEG4 --audio-codec PCM --span cd --video-quality 0 --audio-quality 100 --fps-divider 1').connect(title=title)
+    app = Application(backend="uia").start(r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec MPEG4 --audio-codec PCM --span cd --video-quality 0 --fps-divider 1').connect(title=title)
     dlg = app.window(title=title)
     dlg1 = dlg.child_window(auto_id="2")
     dlg1.wait('visible', timeout=150)

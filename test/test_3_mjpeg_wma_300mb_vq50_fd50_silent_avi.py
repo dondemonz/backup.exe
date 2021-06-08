@@ -13,7 +13,7 @@ def test_30_H264():
     end_time = m.strftime("%Y%m%dT%H%M%S%Z")
     cam_id = "30"
     out_file_name = "30_H264.avi"
-    Application(backend="uia").start(r'"'+path_to_backupexe+'" --out "'+output_folder+out_file_name+'" --cam "' + cam_id + '" --from "'+begin_time+'" --to "' + end_time + '" --archive-path "'+path_to_archive+'" --video-codec MJPEG --audio-codec WMA --span 300 --video-quality 50 --audio-quality 50 --fps-divider 50 --silent')
+    Application(backend="uia").start(r'"'+path_to_backupexe+'" --out "'+output_folder+out_file_name+'" --cam "' + cam_id + '" --from "'+begin_time+'" --to "' + end_time + '" --archive-path "'+path_to_archive+'" --video-codec MJPEG --audio-codec WMA --span 300 --video-quality 50 --fps-divider 50 --silent')
     time.sleep(5)
 
     hasher = hashlib.md5()
@@ -29,7 +29,7 @@ def test_31_H263():
     end_time = m.strftime("%Y%m%dT%H%M%S%Z")
     cam_id = "31"
     out_file_name = "31_H263.avi"
-    Application(backend="uia").start(r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec MJPEG --audio-codec WMA --span 300 --video-quality 50 --audio-quality 50 --fps-divider 50 --silent')
+    Application(backend="uia").start(r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec MJPEG --audio-codec WMA --span 300 --video-quality 50 --fps-divider 50 --silent')
     time.sleep(5)
 
     hasher = hashlib.md5()
@@ -45,7 +45,7 @@ def test_32_MPEG4():
     end_time = m.strftime("%Y%m%dT%H%M%S%Z")
     cam_id = "32"
     out_file_name = "32_MPEG4.avi"
-    Application(backend="uia").start(r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec MJPEG --audio-codec WMA --span 300 --video-quality 50 --audio-quality 50 --fps-divider 50 --silent')
+    Application(backend="uia").start(r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec MJPEG --audio-codec WMA --span 300 --video-quality 50 --fps-divider 50 --silent')
     time.sleep(5)
 
     hasher = hashlib.md5()
@@ -61,7 +61,7 @@ def test_33_MJPEG():
     end_time = m.strftime("%Y%m%dT%H%M%S%Z")
     cam_id = "33"
     out_file_name = "33_MJPEG.avi"
-    Application(backend="uia").start(r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec MJPEG --audio-codec WMA --span 300 --video-quality 50 --audio-quality 50 --fps-divider 50 --silent')
+    Application(backend="uia").start(r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec MJPEG --audio-codec WMA --span 300 --video-quality 50 --fps-divider 50 --silent')
     time.sleep(15)
 
     hasher = hashlib.md5()
@@ -77,7 +77,7 @@ def test_34_YUAN():
     end_time = m.strftime("%Y%m%dT%H%M%S%Z")
     cam_id = "34"
     out_file_name = "34_YUAN.avi"
-    Application(backend="uia").start(r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec MJPEG --audio-codec WMA --span 300 --video-quality 50 --audio-quality 50 --fps-divider 50 --silent')
+    Application(backend="uia").start(r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec MJPEG --audio-codec WMA --span 300 --video-quality 50 --fps-divider 50 --silent')
     time.sleep(10)
 
     hasher = hashlib.md5()
@@ -93,7 +93,7 @@ def test_61_MxPEG():
     end_time = m.strftime("%Y%m%dT%H%M%S%Z")
     cam_id = "31"
     out_file_name = "61_MxPEG.avi"
-    Application(backend="uia").start(r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec MJPEG --audio-codec WMA --span 300 --video-quality 50 --audio-quality 50 --fps-divider 50 --silent')
+    Application(backend="uia").start(r'"' + path_to_backupexe + '" --out "' + output_folder + out_file_name + '" --cam "' + cam_id + '" --from "' + begin_time + '" --to "' + end_time + '" --archive-path "' + path_to_archive + '" --video-codec MJPEG --audio-codec WMA --span 300 --video-quality 50 --fps-divider 50 --silent')
     time.sleep(5)
 
     hasher = hashlib.md5()
